@@ -1,0 +1,42 @@
+const OPENAI_API_KEY = 'insert';
+
+function processEmails() {
+  const threads = GmailApp.search('is:unread');
+  
+  for (const thread of threads) {
+    const messages = thread.getMessages();
+    const lastMessage = messages[messages.length - 1];
+    
+    // Safety check: Don't reply to yourself
+    if (lastMessage.getFrom().includes("just.otto.it@gmail.com")) continue;
+
+    const emailBody = lastMessage.getPlainBody();
+    const aiResponse = callOpenAI(emailBody);
+
+    thread.reply(aiResponse);
+    
+    thread.markRead();
+  }
+}
+
+function callOpenAI(text) {
+  const url = "https://api.openai.com/v1/chat/completions";
+  const payload = {
+    model: "gpt-4o-mini", // Use mini to keep costs low
+    messages: [
+      { role: "system", content: "" },
+      { role: "user", content: text }
+    ]
+  };
+
+  const options = {
+    method: "post",
+    contentType: "application/json",
+    headers: { Authorization: "Bearer " + OPENAI_API_KEY },
+    payload: JSON.stringify(payload)
+  };
+
+  const response = UrlFetchApp.fetch(url, options);
+  const json = JSON.parse(response.getContentText());
+  return json.choices[0].message.content;
+}
