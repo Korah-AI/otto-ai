@@ -1,5 +1,5 @@
-# otto-ai
-# Otto, The Email-Based ChatBot - [just.otto.it@gmail.com](url)
+# Otto, The Email-Based ChatBot
+[just.otto.it@gmail.com](url)
 
 <img width="200" height="200" alt="ottoclear" src="https://github.com/user-attachments/assets/d3bd1407-63aa-491a-bf81-0776ebbdae1e" /> 
 
