@@ -10,7 +10,11 @@
   <li>I came up with this idea as a joke at school during a physics class. Enjoy.</li>
 </ul>
 
-# Requirements / Setup
+# Setup
 <ul>
-  <li>Paste the code in Google App Scripts, provide your own email and OpenAI API Key, and create a trigger for the "processEmails" function to occur every minute. </li>
+  <li>Paste the code in Google App Scripts</li>
+  <li>Provide your own email and OpenAI API Key</li> 
+  <li>Create a trigger for the "processEmails" function to occur every minute</li>
+  <li>**Optional**</li>
+    <li>Deploy via Google Cloud.</li>
 </ul>
