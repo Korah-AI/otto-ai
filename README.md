@@ -1,7 +1,7 @@
 # Otto, The Email-Based ChatBot
 - [just.otto.it@gmail.com](url)
 
-<img width="200" height="200" alt="ottoclear" src="https://i.postimg.cc/P5xQvB0n/Untitled-(7).png" /> 
+<img width="500" height="500" alt="ottoclear" src="https://i.postimg.cc/P5xQvB0n/Untitled-(7).png" /> 
 
 # Description
 <ul>
